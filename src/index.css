@@ -105,6 +105,9 @@
   --bs-primary-rgb: 20, 54, 66;
   --bs-secondary: #EC9A29;
   --bs-secondary-rgb: 236, 154, 41;
+  --bs--info : #E9f7fc;
+  --bs-info-rgb : 233, 247, 252;
+
 }
 
 /* Navbar general */
@@ -140,5 +143,9 @@
 .navbar-toggler:focus {
   outline: none;
   box-shadow: none; 
+}
+
+.container-logo{
+    background-color: var(--bs--info);
 }
 

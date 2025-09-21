@@ -4,11 +4,13 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import { Buscador } from './Routes/Buscador'
 import { Historial } from './Routes/Historial'
 import { About } from './Routes/About'
+import { Logo } from './Components/Logo'
 
 export const BuscadorPeliculas = () => {
   return (
     <>
         <NavBar/>
+        <Logo/>
         <Routes>
           <Route path='/' element={ <Buscador/> }/>
           <Route path='/buscador' element={ <Buscador/> }/>
