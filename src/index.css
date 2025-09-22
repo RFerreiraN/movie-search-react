@@ -103,11 +103,21 @@
 :root {
   --bs-primary: #143642;
   --bs-primary-rgb: 20, 54, 66;
+  --bs-primary-subtle : #0f4a8dd8;
   --bs-secondary: #EC9A29;
   --bs-secondary-rgb: 236, 154, 41;
   --bs--info : #E9f7fc;
   --bs-info-rgb : 233, 247, 252;
 
+}
+
+@font-face {
+  font-family: 'oswald';
+  src: url('/src/assets/FONTS/Oswald/Oswald-VariableFont_wght.ttf');
+}
+
+body{
+  font-family: 'oswald';
 }
 
 /* Navbar general */
@@ -147,5 +157,23 @@
 
 .container-logo{
     background-color: var(--bs--info);
+}
+
+.container-logo img {
+  padding: 25px;
+}
+
+.container-logo p{
+  color: #EC9A29;
+}
+
+.container-logo h1{
+  font-size: 45px;
+  color: #143642;
+}
+
+.container-logo span{
+  
+  color: var(--bs-primary-subtle);
 }
 
