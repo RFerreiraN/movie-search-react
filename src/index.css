@@ -177,3 +177,7 @@ body{
   color: var(--bs-primary-subtle);
 }
 
+.container-buscador{
+  padding: 0;
+  margin: 0;
+}
