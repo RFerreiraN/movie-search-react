@@ -103,10 +103,10 @@
 :root {
   --bs-primary: #143642;
   --bs-primary-rgb: 20, 54, 66;
-  --bs-primary-subtle : #0f4a8dd8;
+  --bs-primary-subtle: #0f4a8dd8;
   --bs-secondary: #EC9A29;
   --bs-secondary-rgb: 236, 154, 41;
-  --bs--info : #E9f7fc;
+  --bs-info : #E9f7fc;
   --bs-info-rgb : 233, 247, 252;
 
 }
@@ -172,12 +172,23 @@ body{
   color: #143642;
 }
 
-.container-logo span{
-  
+.container-logo span{ 
   color: var(--bs-primary-subtle);
 }
 
-.container-buscador{
-  padding: 0;
-  margin: 0;
+
+
+
+.btn-primary {
+  background-color: #EC9A29;
+  border-color: #EC9A29;
+  color: white;
 }
+
+.btn-primary:hover {
+  background-color: #d68921;
+  border-color: #d68921;
+}
+
+
+
