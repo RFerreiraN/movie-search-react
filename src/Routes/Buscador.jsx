@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 let apiKey = '755ce7a7d4fe1b26cff21b7995d49852';
 let urlApi = 'https://api.themoviedb.org/3/search/movie';
@@ -85,7 +85,7 @@ export const Buscador = () => {
                   }}>
                   {item.overview}
                 </p>
-                <NavLink to={'/detalles'} className="btn btn-primary mt-auto">Ver detalle</NavLink>
+                <Link to={`/detalles/${item.id}`} className="btn btn-primary mt-auto">Ver detalle</Link>
               </div>
             </div>
           </div>
