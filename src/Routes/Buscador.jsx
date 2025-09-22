@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 let apiKey = '755ce7a7d4fe1b26cff21b7995d49852';
 let urlApi = 'https://api.themoviedb.org/3/search/movie';
@@ -14,8 +15,10 @@ export const Buscador = () => {
 
   const onSubmitForm = (e) => {
     e.preventDefault()
-    if (busqueda.trim().length === 0) return
-    console.log(busqueda)
+    if (busqueda.trim().length === 0) {
+      alert('Debes introducir un nombre de pelicula')
+      return
+    } 
     fetchPeliculas()
     setBusqueda("")
   };
@@ -24,17 +27,23 @@ export const Buscador = () => {
     try {
       const response = await fetch(`${urlApi}?api_key=${apiKey}&query=${busqueda}`)
       const data = await response.json()
+      if(data.results.length === 0){
+        alert('No se encontraron peliculas que coincidan con esa búsqueda')
+      }
       setPeliculas(data.results)
-      console.log(data)
+      
     } catch (error) {
       console.error('Ha ocurrido el siguiente error: ', error)
     }
   }
 
+  const resetBusqueda = () =>{
+    setBusqueda("")
+    setPeliculas([])
+  }
 
   return (
     <div className="container mb-5">
-  
       <div className="d-flex justify-content-center mb-4">
         <form className="w-100 w-md-50" onSubmit={onSubmitForm}>
           <div className="input-group">
@@ -42,12 +51,12 @@ export const Buscador = () => {
               type="text"
               className="form-control"
               name="busqueda"
-              placeholder="Introduce Pelicula"
+              placeholder="Introduce Nombre de Pelicula"
               value={busqueda}
               onChange={handleInput}
             />
-            <button type="submit" className="btn btn-primary">Buscar</button>
-            <button type="submit" className="btn btn-primary">Limpiar</button>
+            <button type="submit" className="btn btn-primary me-2">Buscar</button>
+            <button type="button" className="btn btn-primary" onClick={resetBusqueda}>Limpiar</button>
           </div>
         </form>
       </div>
@@ -76,7 +85,7 @@ export const Buscador = () => {
                   }}>
                   {item.overview}
                 </p>
-                <a href="#" className="btn btn-primary mt-auto">Ver detalle</a>
+                <NavLink to={'/detalles'} className="btn btn-primary mt-auto">Ver detalle</NavLink>
               </div>
             </div>
           </div>

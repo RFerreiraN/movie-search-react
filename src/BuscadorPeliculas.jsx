@@ -5,6 +5,7 @@ import { Buscador } from './Routes/Buscador'
 import { Historial } from './Routes/Historial'
 import { About } from './Routes/About'
 import { Logo } from './Components/Logo'
+import { Detalles } from './Routes/Detalles'
 
 export const BuscadorPeliculas = () => {
   return (
@@ -16,6 +17,7 @@ export const BuscadorPeliculas = () => {
           <Route path='/buscador' element={ <Buscador/> }/>
           <Route path='/about' element={ <About/> }/>
           <Route path='/historial' element={ <Historial/> }/>
+          <Route path='/detalles/:id' element={ <Detalles/> }/>
           <Route path='/*' element={ <Navigate to = '/'/> }/>
         </Routes>
     </>

@@ -2,11 +2,19 @@ import React from 'react'
 
 export const Logo = () => {
   return (
-    <div >
-      <div className='container-logo d-flex align-items-center justify-content-start px-5'>
-        <img src='src/assets/fondo-cine.png' alt='logo' width={"180"} height={"150"} />
-        <div className="ms-4 d-flex flex-column">
-          <h1>Movie<span>Search</span></h1>
+    <div className="w-100">
+      <div className="container-logo d-flex flex-wrap align-items-center justify-content-center justify-content-md-start text-center text-md-start">
+        <img 
+          src="src/assets/fondo-cine.png" 
+          alt="logo" 
+          width="180" 
+          height="150" 
+          className="mb-2 mb-md-0"
+        />
+        <div className="ms-md-4 d-flex flex-column">
+          <h1 className="fs-2 fs-md-1">
+            Movie<span>Search</span>
+          </h1>
           <p className="mb-0">Pasión por el cine</p>
         </div>
       </div>

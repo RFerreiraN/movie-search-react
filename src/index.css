@@ -156,7 +156,7 @@ body{
 }
 
 .container-logo{
-    background-color: var(--bs--info);
+    background-color: var(--bs-info);
 }
 
 .container-logo img {
