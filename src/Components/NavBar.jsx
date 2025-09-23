@@ -18,7 +18,7 @@ export const NavBar = () => {
                 <NavLink to={'/about'}  className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>¿Quienes Somos?</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to={'/historial'}  className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Historial</NavLink>
+                <NavLink to={'/favoritas'}  className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Favoritas</NavLink>
               </li>
             </ul>
           </div>
