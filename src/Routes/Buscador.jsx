@@ -7,7 +7,7 @@ let urlImage = 'https://image.tmdb.org/t/p/w200';
 
 export const Buscador = () => {
   const [busqueda, setBusqueda] = useState('');
-  const [peliculas, setPeliculas] = useState([])
+  const [peliculas, setPeliculas] = useState([]);
 
   const handleInput = ({ target }) => {
     setBusqueda(target.value)
@@ -34,7 +34,7 @@ export const Buscador = () => {
       
     } catch (error) {
       console.error('Ha ocurrido el siguiente error: ', error)
-    }
+    } 
   }
 
   const resetBusqueda = () =>{
@@ -82,10 +82,9 @@ export const Buscador = () => {
                     WebkitLineClamp: 3,
                     WebkitBoxOrient: "vertical",
                     textOverflow: "ellipsis"
-                  }}>
-                  {item.overview}
+                  }}>{item.overview}                 
                 </p>
-                <Link to={`/detalles/${item.id}`} className="btn btn-primary mt-auto">Ver detalle</Link>
+                <Link to={`/detalles/${item.id}`} className="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover mt-auto">+ Detalles</Link>
               </div>
             </div>
           </div>
