@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { PeliculaContext } from '../Context/PeliculaContext';
 
 let apiKey = '755ce7a7d4fe1b26cff21b7995d49852';
 let urlApi = 'https://api.themoviedb.org/3/search/movie';
 let urlImage = 'https://image.tmdb.org/t/p/w200';
 
 export const Buscador = () => {
-  const [busqueda, setBusqueda] = useState('');
-  const [peliculas, setPeliculas] = useState([]);
+
+  const {busqueda, setBusqueda, peliculas, setPeliculas} = useContext(PeliculaContext)
 
   const handleInput = ({ target }) => {
     setBusqueda(target.value)
