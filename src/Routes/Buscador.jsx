@@ -44,7 +44,7 @@ export const Buscador = () => {
   }
 
   return (
-    <div className="container mb-5">
+    <div className="container mt-5">
       <div className="d-flex justify-content-center mb-4">
         <form className="w-100 w-md-50" onSubmit={onSubmitForm}>
           <div className="input-group">
@@ -63,7 +63,7 @@ export const Buscador = () => {
       </div>
 
  
-      <div className="row g-3">
+      <div className="row g-3 ">
         {peliculas.map(item => (
           <div className="col-6 col-md-4 col-lg-3" key={item.id}>
             <div className="card h-100 d-flex flex-column">

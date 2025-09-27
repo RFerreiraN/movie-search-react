@@ -4,34 +4,37 @@ import { PeliculaContext } from '../Context/PeliculaContext'
 
 export const Favoritas = () => {
 
-  const { favoritas } = useContext(PeliculaContext)
-
+  const { favoritas, eliminarFav } = useContext(PeliculaContext)
+ 
   return (
     <>
+      <div className="container mt-5">
         <table className="table table-info">
           <thead>
             <tr>
-              <th scope="col">Pelicula</th>
-              <th scope="col">Año de estreno</th>
-              <th scope="col">Web Site</th>
-              <th scope="col"></th>
+              <td scope="col" className='columnasFavs'>Pelicula</td>
+              <td scope="col" className='columnasFavs'>Año de estreno</td>
+              <td scope="col" className='columnasFavs'>Web Site</td>
+              <td scope="col" className='columnasFavs'></td>
             </tr>
           </thead>
           {favoritas.map(item => (
             <tbody key={item.id}>
               <tr >
-                <th scope="row">{item.original_title}</th>
-                <td>{item.release_date}</td>
+                <td scope="row" className='inputsFavs'>{item.original_title}</td>
+                <td className='inputsFavs'>{item.release_date}</td>
                 <td>
-                   <a href={`https://www.themoviedb.org/movie/${item.id}`} target="_blank" rel="noopener noreferrer">Web</a>
+                  <a href={`https://www.themoviedb.org/movie/${item.id}`} target="_blank" rel="noopener noreferrer">Web</a>
                 </td>
                 <td>
-                  <button>Eliminar</button>
+                  <button onClick={() => eliminarFav(item.id)}>Eliminar</button>
                 </td>
               </tr>
             </tbody>
           ))}
         </table>
+      </div>
+
     </>
   )
 }

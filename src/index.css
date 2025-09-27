@@ -240,4 +240,26 @@ body {
 
 .card-detail a{
   text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos de Lista de peliculas favoritas */
+
+table.table td.columnasFavs{
+  color: #EC9A29;
+}
+
+table.table td.inputsFavs{
+  color: #143642
+}
+
+table.table td a{
+  text-decoration: none;
+  color: #143642;
+}
+
+table.table td button{
+  border: solid 1px #EC9A29;
+  background-color: transparent;
+  color: #143642;
 }

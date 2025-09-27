@@ -19,7 +19,6 @@ export const Detalles = () => {
     const response = await fetch(`${urlApi}/${id}?api_key=${apiKey}`);
     const data = await response.json()
     setPelicula(data)
-    console.log(data)
   }
 
   const volverBusqueda = () => {
@@ -28,7 +27,6 @@ export const Detalles = () => {
 
   const irFavoritas = () => {
     setFavoritas(previus => [...previus, pelicula])
-    navigate("/favoritas")
   }
  
 
