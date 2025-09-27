@@ -26,7 +26,15 @@ export const Detalles = () => {
   }
 
   const irFavoritas = () => {
-    setFavoritas(previus => [...previus, pelicula])
+    // setFavoritas(previus => [...previus, pelicula])
+    setFavoritas( prev => {
+      const peliExiste = prev.some(p => p.id === pelicula.id)
+      if(peliExiste){
+        alert('La película ya fue agregada a Favoritas')
+        return prev
+      }
+      return [...prev, pelicula]
+    })
   }
  
 

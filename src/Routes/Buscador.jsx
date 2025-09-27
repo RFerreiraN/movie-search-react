@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { PeliculaContext } from '../Context/PeliculaContext';
 
 let apiKey = '755ce7a7d4fe1b26cff21b7995d49852';

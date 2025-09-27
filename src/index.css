@@ -263,3 +263,17 @@ table.table td button{
   background-color: transparent;
   color: #143642;
 }
+
+/* Estilos About */
+
+.tituloAbout{
+  color: #143642;
+}
+
+.parrafoAbout{
+  color: var(--bs-primary-subtle);
+}
+
+.listaAbout{
+  color: #EC9A29;
+}
