@@ -1,11 +1,10 @@
-import logoImg from '../assets/fondo-cine.png'; 
 
 export const Logo = () => {
   return (
     <div className="w-100">
       <div className="container-logo d-flex flex-wrap align-items-center justify-content-center justify-content-md-start text-center text-md-start">
         <img 
-          src={logoImg} 
+          src="/assets/fondo-cine.png"
           alt="logo" 
           width="180" 
           height="150" 
